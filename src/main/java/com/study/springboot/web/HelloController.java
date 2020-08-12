@@ -1,19 +1,20 @@
 package com.study.springboot.web;
 
+import com.study.springboot.web.dto.HelloResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
 
-    @GetMapping
+    @GetMapping("/hello")
     public String hello() {
         return "hello";
     }
 
-//    public String test() {
-//        String result = "";
-//
-//        return result;
-//    }
+    @GetMapping("/hello/dto")
+    public HelloResponseDto helloDto(@RequestParam("name") String name, @RequestParam int amount) {
+        return new HelloResponseDto(name, amount);
+    }
 }
