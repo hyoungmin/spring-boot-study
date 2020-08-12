@@ -10,4 +10,10 @@ public class HelloController {
     public String hello() {
         return "hello";
     }
+
+//    public String test() {
+//        String result = "";
+//
+//        return result;
+//    }
 }
