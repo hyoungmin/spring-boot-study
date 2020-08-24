@@ -8,7 +8,7 @@ import org.junit.Test;
 public class HelloResponseDtoTest {
 
     @Test
-    public void 롬복_기능_테스트() {
+    public void lombok_function_test() {
         // given
         String name = "test";
         int amount = 1000;

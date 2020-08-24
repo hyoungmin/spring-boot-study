@@ -26,7 +26,7 @@ public class PostRepositoryTest {
     }
 
     @Test
-    public void 게시글저장_불러오기() {
+    public void posts_save_load() {
         //given
         String title = "테스트 게시글";
         String content = "테스트 본문";
@@ -47,7 +47,7 @@ public class PostRepositoryTest {
     }
 
     @Test
-    public void BaseTimeEntity_등록() {
+    public void BaseTimeEntity_registration() {
         //given
         LocalDateTime now = LocalDateTime.of(2019,6,5,0,0,0);
         postsRepository.save(Posts.builder()

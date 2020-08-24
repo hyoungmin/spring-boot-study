@@ -1,4 +1,4 @@
-package com.study.springboot.config.WebConfig;
+package com.study.springboot.config;
 
 import com.study.springboot.config.auth.LoginUserArgumentResolver;
 import lombok.RequiredArgsConstructor;
