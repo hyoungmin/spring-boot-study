@@ -54,11 +54,20 @@ public class OAuthAttributes {
     }
 
     public User toEntity() {
+        Role givenRole = Role.GUEST;
+
+        if(email != null) {
+            // gudals123456(내 계정)으로 로그인 하면 USER 권한을 주도록! 계속 테스트 하는데 너무 불편해 죽겠다.
+            if(email.startsWith("gudals123456")) {
+                givenRole = Role.USER;
+            }
+        }
+
         return User.builder()
                 .name(name)
                 .email(email)
                 .picture(picture)
-                .role(Role.GUEST)
+                .role(givenRole)
                 .build();
     }
 }
